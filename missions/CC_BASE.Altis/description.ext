@@ -1,0 +1,68 @@
+/****************************************************************
+
+Cavallers del Cel Mission Framework
+
+Script: Description mission
+Author: OMSmolina
+Script version: 1.0
+
+Game type: n/a
+File: description.ext
+
+Mods require: CBA, AGM
+
+****************************************************************/
+
+//**** Loading Screen
+
+Author = OMSmolina/oscarmolinadev; //Author of the mission. The default loading screen shows this string below the onLoadName in a smaller font prefixed by "by"
+loadScreen = "data\images\perfilsvascc.jpg"; //Picture - Example: https://community.bistudio.com/wikidata/images/9/99/A3_loading_mission.jpg
+onLoadName = "CC Mission Framework"; //String (usually mission name) shown during mission loading
+OnLoadMission = "Cavallers del Cel Mission Framework 1.0"; //The onLoadMission text is placed below the load screen
+
+//**** Mission type
+
+class Header {
+	gameType = Coop; //Mission type - Examples: Coop, DM, Team, CTF.. url: https://community.bistudio.com/wiki/Multiplayer_Game_Types
+	minPlayers = 1; //Min. players in mission
+	maxPlayers = 15; //Max. players in mission
+};
+
+//****  Mission specific settings
+
+showGPS = 1; //Allow GPS - (1=Allowed), (0=Disallowed)
+showCompass = 1; //Allow Compass - (1=Allowed), (0=Disallowed)
+showWatch = 1; //Allow Watch - (1=Allowed), (0=Disallowed)
+showMap = 1;  //Allow Map - (1=Allowed), (0=Disallowed)
+showUAVFeed = 1; //Enables/Disables the UAV Feed
+disableChannels[]={1,2,3,4}; // Restrict chat channels where (0=Global),(1=Side),(2=Command),(3=Group),(4=Vehicle),(5=Direct),(6=System)
+
+//**** Respawn
+
+respawn = "BASE"; //(0)"NONE"=No respawn, (1)"BIRD"=Respawn as a seagull, (2)"INSTANT"=Respawn just where you died, (3)"BASE"=Respawn in base, (4)"GROUP"=Respawn in your group(if there's no AI left, you'll become a seagull)
+respawnDelay = 5; //Respawn delay time in seconds
+respawnDialog = 0; //Show the scoreboard and respawn countdown timer for a player if he is killed with respawn 3. Default is 1 (true) - (1=Enable), (0=Disable)
+
+//**** AI
+
+disabledAI = 1; //When 1, removes all playable units which do not have a human player. When 0, a logging out player will have AI take control of his character. Default value is 0. (MP)
+aiKills = 0; // Enables scorelist for AI players - (1=Enable), (0=Disable)
+
+//**** Other params
+
+enableItemsDropping = 0; //Disable dropping items while swimming. - (1=Enable), (0=Disable)
+
+
+/****************************************************************
+
+Libraries
+
+****************************************************************/
+
+//**** VAS
+
+#include "libs\VAS\menu.hpp"
+
+class CfgFunctions {
+	#include "libs\VAS\cfgfunctions.hpp"
+};
