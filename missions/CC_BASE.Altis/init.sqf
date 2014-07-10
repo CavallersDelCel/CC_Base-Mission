@@ -38,6 +38,7 @@ waitUntil {scriptDone _missionInit};
  *
  */
 
+call compile preprocessFileLineNumbers "libs\UPSMON\Init_UPSMON.sqf";
 
 
 //Ends the effect of black screen

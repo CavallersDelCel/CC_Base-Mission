@@ -13,12 +13,17 @@ Mods require: CBA, AGM
 
 ****************************************************************/
 
+Author = OMSmolina/oscarmolinadev; //Author of the mission. The default loading screen shows this string below the onLoadName in a smaller font prefixed by "by"
+
 //**** Loading Screen
 
-Author = OMSmolina/oscarmolinadev; //Author of the mission. The default loading screen shows this string below the onLoadName in a smaller font prefixed by "by"
 loadScreen = "data\images\perfilsvascc.jpg"; //Picture - Example: https://community.bistudio.com/wikidata/images/9/99/A3_loading_mission.jpg
 onLoadName = "CC Mission Framework"; //String (usually mission name) shown during mission loading
 OnLoadMission = "Cavallers del Cel Mission Framework 1.0"; //The onLoadMission text is placed below the load screen
+
+//**** Overview Mission MP/SP
+overviewPicture = "data\images\perfilsvascc.jpg"; //Picture
+overviewText = "Cavallers del Cel Mission Framework 1.0"; // Description mission
 
 //**** Mission type
 
@@ -34,7 +39,7 @@ showGPS = 1; //Allow GPS - (1=Allowed), (0=Disallowed)
 showCompass = 1; //Allow Compass - (1=Allowed), (0=Disallowed)
 showWatch = 1; //Allow Watch - (1=Allowed), (0=Disallowed)
 showMap = 1;  //Allow Map - (1=Allowed), (0=Disallowed)
-showUAVFeed = 1; //Enables/Disables the UAV Feed
+showUAVFeed = 1; //Allow the UAV Feed - (1=Allowed), (0=Disallowed)
 disableChannels[]={1,2,3,4}; // Restrict chat channels where (0=Global),(1=Side),(2=Command),(3=Group),(4=Vehicle),(5=Direct),(6=System)
 
 //**** Respawn
@@ -59,7 +64,7 @@ Libraries
 
 ****************************************************************/
 
-//**** VAS
+//**** VAS v2.6
 
 #include "libs\VAS\menu.hpp"
 

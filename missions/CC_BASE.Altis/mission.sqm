@@ -10,7 +10,10 @@ class Mission
 		"agm_medical",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-		"A3_Weapons_F_Ammoboxes"
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Characters_F_Gamma",
+		"a3_uav_f_characters_f_gamma",
+		"A3_Modules_F_LiveFeed"
 	};
 	addOnsAuto[]=
 	{
@@ -20,12 +23,16 @@ class Mission
 		"agm_medical",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
+		"A3_Characters_F_Gamma",
+		"a3_uav_f_characters_f_gamma",
+		"A3_Modules_F_LiveFeed",
 		"A3_Weapons_F_Ammoboxes",
 		"a3_map_altis"
 	};
 	randomSeed=6329163;
 	class Intel
 	{
+		resistanceEast=1;
 		startWeather=0.29999998;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -43,7 +50,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=5;
+		items=8;
 		class Item0
 		{
 			side="LOGIC";
@@ -196,14 +203,129 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14177.207,19.555645,16284.652};
-					azimut=-2.4049218;
+					position[]={12574.824,14.844068,14356.71};
+					azimut=249.36456;
 					id=4;
 					side="WEST";
 					vehicle="B_recon_M_F";
 					player="PLAYER COMMANDER";
 					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+				};
+			};
+		};
+		class Item5
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={12417.187,6.9811411,14286.477};
+					azimut=103.898;
+					id=5;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="nul = [this,""area1""] execVM ""libs\UPSMON\UPSMON.sqf"";";
+				};
+				class Item1
+				{
+					position[]={12413.536,7.243412,14292.532};
+					azimut=103.89828;
+					id=6;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={12408.172,6.7858105,14286.059};
+					azimut=103.89828;
+					id=7;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={12408.101,7.0566015,14291.227};
+					azimut=103.89828;
+					id=8;
+					side="WEST";
+					vehicle="B_soldier_AAR_F";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={12401.959,6.8234677,14288.721};
+					azimut=103.89828;
+					id=9;
+					side="WEST";
+					vehicle="B_medic_F";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item6
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={12553.321,16.829041,14404.933};
+					id=10;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="nul = [this,""area2""] execVM ""libs\UPSMON\UPSMON.sqf"";";
+				};
+				class Item1
+				{
+					position[]={12558.321,16.739759,14399.933};
+					id=11;
+					side="WEST";
+					vehicle="B_soldier_UAV_F";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+			};
+		};
+		class Item7
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14972.043,-51.916821,14118.849};
+					class args
+					{
+						items=1;
+						class Item0
+						{
+							value="1";
+							parentCls="ModuleLiveFeedInit_F";
+							typeName="Units";
+						};
+					};
+					id=12;
+					side="LOGIC";
+					vehicle="ModuleLiveFeedInit_F";
+					leader=1;
+					lock="UNLOCKED";
 					skill=0.60000002;
+					init="nul = call compile preprocessFile ""libs\UPSMON\UPSMON\COMMON\markerAlpha.sqf"";";
 				};
 			};
 		};
@@ -214,11 +336,34 @@ class Mission
 		class Item0
 		{
 			position[]={14177.558,19.522089,16288.688};
-			id=5;
+			id=13;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			init="this addAction[""<t color='#ff1111'>Virtual Ammobox</t>"", ""libs\VAS\open.sqf""];";
+		};
+	};
+	class Markers
+	{
+		items=2;
+		class Item0
+		{
+			position[]={12498.107,12.182856,14354.347};
+			name="area1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorBlue";
+			a=150;
+			b=150;
+		};
+		class Item1
+		{
+			position[]={12538.943,16.339853,14397.578};
+			name="area2";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=100;
+			b=100;
 		};
 	};
 };

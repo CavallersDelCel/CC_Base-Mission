@@ -11,6 +11,14 @@ File: instructions.txt
 
 ****************************************************************/
 
-/**** VAS
+/**** VAS 2.6
 
 this addAction["<t color='#ff1111'>Virtual Ammobox</t>", "libs\VAS\open.sqf"];
+
+/**** UPSMON 6.0.8 hotfix 2
+
+Mision Init.sqf: call compile preprocessFileLineNumbers "libs\UPSMON\Init_UPSMON.sqf";
+
+Leader group: nul = [this,"area1"] execVM "libs\UPSMON\UPSMON.sqf";
+
+Game Logic: nul = call compile preprocessFile "libs\UPSMON\UPSMON\COMMON\markerAlpha.sqf";
