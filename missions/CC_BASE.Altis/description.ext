@@ -58,6 +58,21 @@ aiKills = 0; // Enables scorelist for AI players - (1=Enable), (0=Disable)
 enableItemsDropping = 0; //Disable dropping items while swimming. - (1=Enable), (0=Disable)
 
 
+class CfgDebriefing {
+    class EndWin {
+        title = "Mission Completed";
+        subtitle = "Good Job";
+        description = "You survived long enough and reached the extraction point.";
+    };
+    class EndLose {
+        title = "Mission Failed";
+        subtitle = "You Lost";
+        description = "All members of your team were killed.";
+    };
+};
+
+
+
 /****************************************************************
 
 Libraries

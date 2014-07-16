@@ -7,7 +7,7 @@ if (!isServer && hasInterface ) exitWith {};
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //1=Enable or 0=disable debug. In debug could see a mark positioning de leader and another mark of the destination of movement, very useful for editing mission
-UPSMON_Debug = 1;
+UPSMON_Debug = 0;
 
 //1=Enable or 0=disable. In game display global chat info about who just killed a civilian.
 //numbers of Civilians killed by players could be read from array 'KILLED_CIV_COUNTER' -> [Total, by West, by East, by Res, The killer]

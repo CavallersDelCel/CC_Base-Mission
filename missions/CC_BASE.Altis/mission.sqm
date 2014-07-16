@@ -13,7 +13,8 @@ class Mission
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Characters_F_Gamma",
 		"a3_uav_f_characters_f_gamma",
-		"A3_Modules_F_LiveFeed"
+		"A3_Modules_F_LiveFeed",
+		"A3_Structures_F_Bootcamp_Items_Electronics"
 	};
 	addOnsAuto[]=
 	{
@@ -24,9 +25,8 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
 		"A3_Characters_F_Gamma",
-		"a3_uav_f_characters_f_gamma",
-		"A3_Modules_F_LiveFeed",
 		"A3_Weapons_F_Ammoboxes",
+		"A3_Structures_F_Bootcamp_Items_Electronics",
 		"a3_map_altis"
 	};
 	randomSeed=6329163;
@@ -50,7 +50,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=8;
+		items=7;
 		class Item0
 		{
 			side="LOGIC";
@@ -300,47 +300,28 @@ class Mission
 				};
 			};
 		};
-		class Item7
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={14972.043,-51.916821,14118.849};
-					class args
-					{
-						items=1;
-						class Item0
-						{
-							value="1";
-							parentCls="ModuleLiveFeedInit_F";
-							typeName="Units";
-						};
-					};
-					id=12;
-					side="LOGIC";
-					vehicle="ModuleLiveFeedInit_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					init="nul = call compile preprocessFile ""libs\UPSMON\UPSMON\COMMON\markerAlpha.sqf"";";
-				};
-			};
-		};
 	};
 	class Vehicles
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			position[]={14177.558,19.522089,16288.688};
-			id=13;
+			id=12;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			init="this addAction[""<t color='#ff1111'>Virtual Ammobox</t>"", ""libs\VAS\open.sqf""];";
+		};
+		class Item1
+		{
+			position[]={14912.719,-55.937035,14247.784};
+			special="NONE";
+			id=13;
+			side="EMPTY";
+			vehicle="Land_VRGoggles_01_F";
+			skill=0.60000002;
+			init="nul = call compile preprocessFile ""libs\UPSMON\UPSMON\COMMON\markerAlpha.sqf"";";
 		};
 	};
 	class Markers

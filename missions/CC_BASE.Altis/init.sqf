@@ -28,7 +28,7 @@ _blackScreen = execVM"fnc\effects\blackScreen.sqf";
 _missionInit = [] execVM "fnc\missionInit.sqf";
 waitUntil {scriptDone _missionInit};
 
-
+[] execVM "briefing.sqf";
 
 /*
  *
